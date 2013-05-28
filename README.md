@@ -3,14 +3,14 @@ Eustore Catalog Server
 
 These are the configuration files needed to create a local eustore server that can be used with the eustore client tools.
 
-## Pre-reqs
+### Pre-reqs
 
 The requirements for the eustore-catalog-server are as follows:
 
 * An apache/nginx server
 * (Optional) DNS entry for eustore-catalog-server (i.e. the value for "EUSTORE_URL") that can be used with the eustore client tools
 
-## Web server setup
+### Web server setup
 
 The following is an example of an apache configuration to be used to set up the eustore-catalog-server:
 
@@ -24,7 +24,7 @@ The following is an example of an apache configuration to be used to set up the 
 </VirtualHost>
 ```
 
-## Catalog JSON file
+### Catalog JSON file
 
 The catalog JSON file is the connection between the eustore client tools and the eustore-catalog-server. This repo contains a template file - catalog-eustore - which can be used to create a custom catalog-eustore file.  The attributes of catalog-eustore template are as follows:
 
