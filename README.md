@@ -1,4 +1,4 @@
-eustore-catalog-server
+Eustore Catalog Server
 ======================
 
 These are the configuration files needed to create a local eustore server that can be used with the eustore client tools.
@@ -14,6 +14,7 @@ The requirements for the eustore-catalog-server are as follows:
 
 The following is an example of an apache configuration to be used to set up the eustore-catalog-server:
 
+```
 <VirtualHost *:80>
     ServerAdmin webmaster@eucalyptus.com
     ServerName emis.eucalyptus.com
@@ -21,6 +22,7 @@ The following is an example of an apache configuration to be used to set up the 
     ErrorLog logs/emis.eucalytpus.com_error.log
     CustomLog logs/emis.eucalytpus.com_access.log common
 </VirtualHost>
+```
 
 ## Catalog JSON file
 
