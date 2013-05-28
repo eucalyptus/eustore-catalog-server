@@ -46,7 +46,7 @@ update_catalog.py catalog-eustore > catalog
 
 This adds the "name" attribute to the catalog JSON file, which is used as a checksum once the image is downloaded by the eustore client tool.  The catalog file needs to be at the DocumentRoot definition of your website.   
 
-## Image location and image file format
+### Image location and image file format
 
 When the eustore client tool accesses the eustore-catalog-server, it refers to the location of the tar-gzipped file located on the web server from the perspective of the DocumentRoot by referencing the "url" attribute of the image. The tar-gzipped file needs to have the following format:
 
