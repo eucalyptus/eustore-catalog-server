@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "url": "<URL or path to tar-gzipped file containing image, ramdisk and kernel>", 
+      "recipe": "<OS base of image>", 
+      "version": "<category of the image>", 
+      "contact": "<email address of maintainer of image>", 
+      "stamp": "<unique stamp for the image; calculated by the following command - date +%s|md5sum|sed '1,$ s/\(....\)\(....\).*/\1-\2/'>", 
+      "architecture": "<architecture - x86_64, i386, i686, etc.>", 
+      "single-kernel": "<if image support multiple hypervisors with one kernel - True|False>",
+      "hypervisors-supported": [<hypervisors the image supports - double-quoted and comma delimited>],
+      "date": "calculated by the following command - date "+%Y%m%d%H%M%S"", 
+      "os": "<OS of the image>", 
+      "description": "<brief description of the image>"
+    }, 
+  ], 
+  "version": "eustore-catalog-YYYY-MM-DD"
+}
