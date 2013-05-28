@@ -50,8 +50,8 @@ When the eustore client tool accesses the eustore-catalog-server, it refers to t
 
 - image
 - <hypervisor>-kernel (where hypervisor is "kvm", "xen", "vmware")
--|__ vmlinuz file
--|__ initrd file
+-- vmlinuz file
+-- initrd file
 
 *Note: there can be multiple <hypervisor>-kernel directories.
 
