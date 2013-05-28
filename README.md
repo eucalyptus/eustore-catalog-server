@@ -48,10 +48,10 @@ This adds the "name" attribute to the catalog JSON file, which is used as a chec
 
 When the eustore client tool accesses the eustore-catalog-server, it refers to the location of the tar-gzipped file located on the web server from the perspective of the DocumentRoot by referencing the "url" attribute of the image. The tar-gzipped file needs to have the following format:
 
-- image
-- <hypervisor>-kernel (where hypervisor is "kvm", "xen", "vmware")
--- vmlinuz file
--- initrd file
+* image
+* <hypervisor>-kernel (where hypervisor is "kvm", "xen", "vmware")
+   * vmlinuz file
+   * initrd file
 
 *Note: there can be multiple <hypervisor>-kernel directories.
 
