@@ -57,4 +57,10 @@ When the eustore client tool accesses the eustore-catalog-server, it refers to t
 
 *Note: there can be multiple <hypervisor>-kernel directories.
 
-Thats it.  After that, make sure the EUSTORE_URL points to the local eustore server, and everything should be good to go.
+Thats it.  After that, make sure the EUSTORE_URL points to the local eustore server by changing the cloud property bootstrap.webservices.default_eustore_url using euca-modify-property:
+
+```
+euca-modify-property -p bootstrap.webservices.default_eustore_url=http://<new EUSTORE_URL>
+```
+
+and everything should be good to go. _Note: For cloud users to see the changes to the bootstrap.webservices.default_eustore_url, they will need to re-download their credentials._
