@@ -15,19 +15,23 @@ def main():
   parsed_cat = json.loads(catfile.read())
   image_list = parsed_cat['images']
   for image in image_list:
-#    print image['name']
-    filename = image['url']
-#    filename = filename[filename.rfind("/")+1:]
-    try:
-      file = open(filename, 'r')
-      m = hashlib.md5()
-      m.update(file.read())
-      hash = m.hexdigest()
-      crc = str(zlib.crc32(hash)& 0xffffffffL)
-#      print crc.rjust(10,"0")
-      image['name'] = crc.rjust(10,"0")
-    except (IOError):
-      print "file not found: "+filename
+    if image['url'] and image['md5']:
+        try:
+            crc = str(zlib.crc32(image['md5'])& 0xffffffffL)
+            image['name'] = crc.rjust(10,"0")
+        except (IOError):
+            print "file not found: "+filename
+    else:
+        filename = image['url']
+        try:
+            file = open(filename, 'r')
+            m = hashlib.md5()
+            m.update(file.read())
+            hash = m.hexdigest()
+            crc = str(zlib.crc32(hash)& 0xffffffffL)
+            image['name'] = crc.rjust(10,"0")
+        except (IOError):
+            print "file not found: "+filename
 
   print json.dumps(parsed_cat, indent=2)
 
